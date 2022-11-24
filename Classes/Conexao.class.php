@@ -7,19 +7,19 @@ final class Conexao{
     public static function conectar()
     {
         if(!(defined('db_user'))){
-            define('db_user', 'raiizgue');
+            define('db_user', 'root');
         }
         if(!defined('db_host')){
-            define('db_host', '%');
+            define('db_host', 'localhost');
         }
         if(!defined('db_pass')){
-            define('db_pass', '12345678');
+            define('db_pass', 'root');
         }
         if(!defined('db_name')){
-            define('db_name', 'pw');
+            define('db_name', 'AulaTec');
         }
         if(!defined('db_port')){
-            define('db_port', 3306);
+            define('db_port', 3360);
         }
         try{
             $conn = new PDO('mysql:host='.db_host.'; port='.db_port.'; dbname='.db_name, db_user, db_pass, array(PDO::MYSQL_ATTR_INIT_COMMAND =>"SET NAMES utf8"));
